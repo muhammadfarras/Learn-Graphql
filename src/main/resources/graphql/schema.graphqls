@@ -1,0 +1,10 @@
+type Query {
+    books:[Book] ## will return list of type Book
+    anotherBooks:[Book]
+}
+
+type Book {
+    id:ID
+    name:String
+    pageCount:Int
+}
