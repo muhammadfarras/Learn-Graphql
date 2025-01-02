@@ -1,5 +1,6 @@
 package com.farras.LearnGraphql.controllers
 
+import com.farras.LearnGraphql.model.Author
 import com.farras.LearnGraphql.model.Book
 import org.springframework.graphql.data.method.annotation.Argument
 import org.springframework.graphql.data.method.annotation.QueryMapping
@@ -21,5 +22,11 @@ class BookController {
     fun getBookById(@Argument id:Int):Book?{
         println("Called ${id}")
         return Book.booksById(id)
+    }
+
+    @SchemaMapping(typeName = "Book", field = "author")
+    fun author(book: Book):Author?{
+        println("Author of : ${book.name}")
+        return Author.authorByBook(book)
     }
 }
