@@ -1,5 +1,6 @@
 type Query {
     books:[Book] ## will return list of type Book
+    bookById(id:Int):Book ## Menerima parameter id(integer) return value book
 }
 
 type Book {
