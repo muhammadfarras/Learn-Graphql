@@ -10,7 +10,9 @@ data class Book(var id:Int,
 
     companion object {
         val books = Arrays.asList(
-            Book(1,"Al Quran",656)
+            Book(1,"Al Quran",656),
+            Book(2,"Pytorch",450),
+            Book(3,"Machine Learning using TensorFlow",752)
         )
     }
 }
